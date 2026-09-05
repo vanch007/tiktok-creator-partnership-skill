@@ -1,0 +1,260 @@
+{
+  "product": {
+    "name": "SHENTAI 8015 Seamless Panties",
+    "target_market": "MY",
+    "target_categories": ["女装与女士内衣"],
+    "adjacent_categories": ["美妆个护", "保健", "穆斯林时尚"],
+    "target_audience": {
+      "gender": "female",
+      "ages": ["18-24", "25-34", "35-44"]
+    },
+    "preferred_content_modes": ["video", "live"],
+    "thresholds": {
+      "gmv": {"high": 100000, "medium": 10000},
+      "units": {"high": 3000, "medium": 300},
+      "gpm": {"high": 100, "medium": 25},
+      "avg_video_views": {"high": 10000, "medium": 1000}
+    }
+  },
+  "cases": [
+    {
+      "id": "affiliate-only-complete-aliamuchi",
+      "subject": {"handle": "@aliamuchi_"},
+      "sources": [
+        {
+          "source_type": "tiktok_affiliate_detail",
+          "source_label": "ShenTai Shop affiliate creator detail",
+          "observed_at": "2026-09-05T00:18:00+08:00",
+          "window": {"start": "2026-08-03", "end": "2026-09-02", "timezone": "GMT+8"},
+          "data": {
+            "handle": "aliamuchi_",
+            "cid": "7494006154446145239",
+            "market": "MY",
+            "category": ["美妆个护"],
+            "followers": "6312",
+            "rating": "5.0",
+            "gmv": "RM10K+",
+            "units": "452",
+            "gpm": "RM401.5",
+            "averageOrderValue": "RM61-RM81",
+            "expectedPostRate": "96.62%",
+            "averageCommissionRate": "--",
+            "productCount": "62",
+            "brandCollaborations": "28",
+            "videoGpm": "RM27.7",
+            "videoCount": "249",
+            "avgVideoViews": "117",
+            "videoEngagement": "2.14%",
+            "liveGpm": "RM577.8",
+            "liveCount": "48",
+            "avgLiveViews": "4349",
+            "liveEngagement": "12.56%",
+            "followerGenderFemale": 0.5146,
+            "ages": {"18-24": 0.17, "25-34": 0.462, "35-44": 0.258, "45-54": 0.072, "55+": 0.038},
+            "topRegions": []
+          }
+        }
+      ],
+      "expected": {
+        "classification": "high",
+        "source_mode": "affiliate_only",
+        "identity_status": "exact_match",
+        "minimum_coverage": 0.9,
+        "missing_fields_include": [],
+        "kalodata_required": false
+      }
+    },
+    {
+      "id": "affiliate-only-sparse-live-ezah",
+      "subject": {"handle": "@ezahkhalid"},
+      "sources": [
+        {
+          "source_type": "tiktok_affiliate_detail",
+          "source_label": "ShenTai Shop affiliate creator detail",
+          "observed_at": "2026-09-05T00:23:00+08:00",
+          "window": {"start": "2026-08-03", "end": "2026-09-02", "timezone": "GMT+8"},
+          "data": {
+            "handle": "ezahkhalid",
+            "cid": "7494030177190118436",
+            "market": "MY",
+            "category": ["保健", "美妆个护", "女装与女士内衣"],
+            "followers": "18万",
+            "gmv": "RM10K+",
+            "units": "1.01万",
+            "gpm": "RM50.6",
+            "averageOrderValue": "RM21-RM41",
+            "expectedPostRate": "61.74%",
+            "averageCommissionRate": "--",
+            "productCount": "427",
+            "brandCollaborations": "155",
+            "videoGpm": "RM50.6",
+            "videoCount": "470",
+            "avgVideoViews": "305",
+            "videoEngagement": "0.43%",
+            "liveGpm": "--",
+            "liveCount": "0",
+            "avgLiveViews": "1",
+            "liveEngagement": "0%",
+            "followerGenderFemale": 0.6177,
+            "ages": {"18-24": 0.057, "25-34": 0.371, "35-44": 0.351, "45-54": 0.135, "55+": 0.086},
+            "topRegions": []
+          }
+        }
+      ],
+      "expected": {
+        "classification": "high",
+        "source_mode": "affiliate_only",
+        "identity_status": "exact_match",
+        "minimum_coverage": 0.9,
+        "missing_fields_include": [],
+        "kalodata_required": false,
+        "explicit_zero_fields": ["live_count", "live_engagement"],
+        "absent_fields": ["live_gpm", "average_commission_rate", "top_regions"]
+      }
+    },
+    {
+      "id": "multi-source-window-and-definition-conflict-nanatjdnn",
+      "subject": {"handle": "@nanatjdnn"},
+      "sources": [
+        {
+          "source_type": "tiktok_affiliate_detail",
+          "source_label": "ShenTai Shop affiliate creator detail",
+          "observed_at": "2026-09-05T00:27:00+08:00",
+          "window": {"start": "2026-08-03", "end": "2026-09-02", "timezone": "GMT+8"},
+          "data": {
+            "handle": "nanatjdnn",
+            "cid": "7494004597511259713",
+            "market": "MY",
+            "category": ["美妆个护", "穆斯林时尚"],
+            "followers": "51.6万",
+            "gmv": "RM124.6K",
+            "units": "6401",
+            "gpm": "RM35.1",
+            "averageOrderValue": "RM24",
+            "expectedPostRate": "42.85%",
+            "averageCommissionRate": "4.5%",
+            "productCount": "174",
+            "brandCollaborations": "29",
+            "videoGpm": "RM35.1",
+            "videoCount": "28",
+            "avgVideoViews": "6.14万",
+            "videoEngagement": "6.25%",
+            "liveGpm": "RM0.00",
+            "liveCount": "0",
+            "avgLiveViews": "1",
+            "liveEngagement": "0%",
+            "followerGenderFemale": 0.7669,
+            "ages": {"18-24": 0.401, "25-34": 0.427, "35-44": 0.12, "45-54": 0.033, "55+": 0.019}
+          }
+        },
+        {
+          "source_type": "kalodata",
+          "source_label": "Kalodata creator detail",
+          "observed_at": "2026-09-05T00:30:00+08:00",
+          "window": {"start": "2026-08-04", "end": "2026-09-02", "timezone": "GMT+8"},
+          "data": {
+            "profile": {
+              "handle": "nanatjdnn",
+              "region": "马来西亚",
+              "fans": "55.4万",
+              "followerAgeMax": "18-24",
+              "followerSex": "Majority Female",
+              "product_count": "59"
+            },
+            "category": ["美妆个护"],
+            "metrics": {
+              "totalRevenue": "RM116K",
+              "sales": "5762",
+              "averageOrderValue": "RM19.55",
+              "videoCount": "59",
+              "videoViews": "657.67万"
+            }
+          }
+        }
+      ],
+      "expected": {
+        "classification": "high",
+        "source_mode": "multi_source",
+        "identity_status": "exact_match",
+        "minimum_coverage": 0.9,
+        "kalodata_required": false,
+        "conflict_fields_include": ["followers", "dominant_age", "gmv"],
+        "selected_source": {"followers": "tiktok_affiliate_detail", "gmv": "tiktok_affiliate_detail"}
+      }
+    },
+    {
+      "id": "similar-handle-must-not-substitute",
+      "subject": {"handle": "@ezahkhalid"},
+      "sources": [
+        {
+          "source_type": "tiktok_affiliate_search",
+          "observed_at": "2026-09-05T00:32:00+08:00",
+          "data": {
+            "handle": "ejahkhalid",
+            "market": "MY",
+            "category": "玩具和爱好",
+            "followers": "2252",
+            "dominantGender": "女性",
+            "dominantGenderShare": "52%",
+            "dominantAge": "25-34",
+            "gmv": "RM29.9",
+            "units": "2",
+            "avgVideoViews": "21",
+            "engagement": "2.1%"
+          }
+        }
+      ],
+      "expected": {
+        "classification": "research_needed",
+        "source_mode": "no_exact_source",
+        "identity_status": "not_verified",
+        "hard_gates_include": ["exact_handle_not_found"],
+        "rejected_handle": "ejahkhalid"
+      }
+    },
+    {
+      "id": "kalodata-only-remains-supported",
+      "subject": {"handle": "@nanatjdnn"},
+      "sources": [
+        {
+          "source_type": "kalodata",
+          "observed_at": "2026-09-05T00:30:00+08:00",
+          "window": {"start": "2026-08-04", "end": "2026-09-02", "timezone": "GMT+8"},
+          "data": {
+            "profile": {
+              "handle": "nanatjdnn",
+              "region": "马来西亚",
+              "fans": "55.4万",
+              "followerAgeMax": "18-24",
+              "followerSex": "Majority Female",
+              "product_count": "59"
+            },
+            "category": ["美妆个护"],
+            "followers": {
+              "followerGenderFemale": 0.7669,
+              "ages": [
+                {"name": "18-24", "value": 0.401},
+                {"name": "25-34", "value": 0.427},
+                {"name": "35-44", "value": 0.12}
+              ]
+            },
+            "metrics": {
+              "totalRevenue": "RM116K",
+              "sales": "5762",
+              "averageOrderValue": "RM19.55",
+              "videoCount": "59",
+              "videoViews": "657.67万"
+            }
+          }
+        }
+      ],
+      "expected": {
+        "classification": "high",
+        "source_mode": "kalodata_only",
+        "identity_status": "exact_match",
+        "minimum_coverage": 0.8,
+        "kalodata_required": false
+      }
+    }
+  ]
+}

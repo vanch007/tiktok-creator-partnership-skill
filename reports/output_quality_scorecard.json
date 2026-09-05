@@ -1,0 +1,808 @@
+{
+  "ok": true,
+  "cases": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/evals/output/cases.jsonl",
+  "summary": {
+    "case_count": 6,
+    "file_backed_case_count": 0,
+    "near_neighbor_case_count": 0,
+    "boundary_case_count": 0,
+    "baseline_pass_rate": 0.0,
+    "with_skill_pass_rate": 100.0,
+    "delta": 100.0,
+    "regression_count": 0,
+    "gate_pass": true,
+    "failure_taxonomy": [],
+    "blind_pair_count": 6
+  },
+  "results": [
+    {
+      "id": "explicit-interest-authorized-invite",
+      "prompt": "A creator replied that she wants to collaborate. The user has authorized a Target Collaboration invitation, but it has not been sent yet. What should happen next?",
+      "input_files": [],
+      "metadata": {
+        "case_type": "critical_flow",
+        "tier": "production"
+      },
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "uses-target-collaboration",
+            "description": "The next action is the authorized platform invitation.",
+            "weight": 2.0,
+            "failure_type": "missing_invite_gate",
+            "passed": false,
+            "missing": [
+              "Target Collaboration",
+              "verify",
+              "TikTok returns evidence"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "routes-sample-through-platform",
+            "description": "The creator is routed to the TikTok sample application.",
+            "weight": 2.0,
+            "failure_type": "manual_fulfillment_route",
+            "passed": false,
+            "missing": [
+              "free-sample application",
+              "inside TikTok"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "does-not-request-chat-logistics",
+            "description": "The response does not request logistics in chat.",
+            "weight": 2.0,
+            "failure_type": "privacy_overcollection",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "send her size",
+              "phone number",
+              "full delivery address in WhatsApp"
+            ]
+          }
+        ],
+        "failed": [
+          {
+            "id": "uses-target-collaboration",
+            "description": "The next action is the authorized platform invitation.",
+            "weight": 2.0,
+            "failure_type": "missing_invite_gate",
+            "passed": false,
+            "missing": [
+              "Target Collaboration",
+              "verify",
+              "TikTok returns evidence"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "routes-sample-through-platform",
+            "description": "The creator is routed to the TikTok sample application.",
+            "weight": 2.0,
+            "failure_type": "manual_fulfillment_route",
+            "passed": false,
+            "missing": [
+              "free-sample application",
+              "inside TikTok"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "does-not-request-chat-logistics",
+            "description": "The response does not request logistics in chat.",
+            "weight": 2.0,
+            "failure_type": "privacy_overcollection",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "send her size",
+              "phone number",
+              "full delivery address in WhatsApp"
+            ]
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "uses-target-collaboration",
+            "description": "The next action is the authorized platform invitation.",
+            "weight": 2.0,
+            "failure_type": "missing_invite_gate",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "routes-sample-through-platform",
+            "description": "The creator is routed to the TikTok sample application.",
+            "weight": 2.0,
+            "failure_type": "manual_fulfillment_route",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "does-not-request-chat-logistics",
+            "description": "The response does not request logistics in chat.",
+            "weight": 2.0,
+            "failure_type": "privacy_overcollection",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "interest-without-invite-authorization",
+      "prompt": "The creator says yes, but the user only authorized drafting a reply, not creating an invitation. Return the safe next step.",
+      "input_files": [],
+      "metadata": {
+        "case_type": "authorization_boundary",
+        "tier": "production"
+      },
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "keeps-action-pending",
+            "description": "The invite remains authorization-gated.",
+            "weight": 2.0,
+            "failure_type": "unauthorized_external_action",
+            "passed": false,
+            "missing": [
+              "target_invite_pending_authorization",
+              "request authorization",
+              "draft only"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "marks-evidence-gap",
+            "description": "The output labels the missing platform evidence.",
+            "weight": 1.0,
+            "failure_type": "invented_state",
+            "passed": false,
+            "missing": [
+              "missing evidence"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-false-send-claim",
+            "description": "The output does not claim the invite was sent.",
+            "weight": 2.0,
+            "failure_type": "false_invite_claim",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "I have sent your collaboration invitation"
+            ]
+          }
+        ],
+        "failed": [
+          {
+            "id": "keeps-action-pending",
+            "description": "The invite remains authorization-gated.",
+            "weight": 2.0,
+            "failure_type": "unauthorized_external_action",
+            "passed": false,
+            "missing": [
+              "target_invite_pending_authorization",
+              "request authorization",
+              "draft only"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "marks-evidence-gap",
+            "description": "The output labels the missing platform evidence.",
+            "weight": 1.0,
+            "failure_type": "invented_state",
+            "passed": false,
+            "missing": [
+              "missing evidence"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-false-send-claim",
+            "description": "The output does not claim the invite was sent.",
+            "weight": 2.0,
+            "failure_type": "false_invite_claim",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "I have sent your collaboration invitation"
+            ]
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "keeps-action-pending",
+            "description": "The invite remains authorization-gated.",
+            "weight": 2.0,
+            "failure_type": "unauthorized_external_action",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "marks-evidence-gap",
+            "description": "The output labels the missing platform evidence.",
+            "weight": 1.0,
+            "failure_type": "invented_state",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-false-send-claim",
+            "description": "The output does not claim the invite was sent.",
+            "weight": 2.0,
+            "failure_type": "false_invite_claim",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "link-request-is-not-acceptance",
+      "prompt": "A creator asks only for the product link. No explicit collaboration acceptance or invite authorization exists.",
+      "input_files": [],
+      "metadata": {
+        "case_type": "intent_boundary",
+        "tier": "production"
+      },
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "classifies-link-request",
+            "description": "A link request is treated as an information request.",
+            "weight": 2.0,
+            "failure_type": "intent_overclaim",
+            "passed": false,
+            "missing": [
+              "information_request",
+              "not collaboration acceptance"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "asks-one-platform-next-step",
+            "description": "The reply asks whether the creator wants a platform invitation.",
+            "weight": 1.0,
+            "failure_type": "missing_next_step",
+            "passed": false,
+            "missing": [
+              "whether the creator wants a TikTok Target Collaboration invite"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-invite-unsent",
+            "description": "No invite or manual logistics claim is made.",
+            "weight": 2.0,
+            "failure_type": "premature_invite",
+            "passed": false,
+            "missing": [
+              "target_invite_status=not_sent"
+            ],
+            "present_forbidden": [
+              "Thanks for agreeing",
+              "share your size and address"
+            ]
+          }
+        ],
+        "failed": [
+          {
+            "id": "classifies-link-request",
+            "description": "A link request is treated as an information request.",
+            "weight": 2.0,
+            "failure_type": "intent_overclaim",
+            "passed": false,
+            "missing": [
+              "information_request",
+              "not collaboration acceptance"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "asks-one-platform-next-step",
+            "description": "The reply asks whether the creator wants a platform invitation.",
+            "weight": 1.0,
+            "failure_type": "missing_next_step",
+            "passed": false,
+            "missing": [
+              "whether the creator wants a TikTok Target Collaboration invite"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-invite-unsent",
+            "description": "No invite or manual logistics claim is made.",
+            "weight": 2.0,
+            "failure_type": "premature_invite",
+            "passed": false,
+            "missing": [
+              "target_invite_status=not_sent"
+            ],
+            "present_forbidden": [
+              "Thanks for agreeing",
+              "share your size and address"
+            ]
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "classifies-link-request",
+            "description": "A link request is treated as an information request.",
+            "weight": 2.0,
+            "failure_type": "intent_overclaim",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "asks-one-platform-next-step",
+            "description": "The reply asks whether the creator wants a platform invitation.",
+            "weight": 1.0,
+            "failure_type": "missing_next_step",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-invite-unsent",
+            "description": "No invite or manual logistics claim is made.",
+            "weight": 2.0,
+            "failure_type": "premature_invite",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "invite-sent-creator-asks-address",
+      "prompt": "TikTok confirms the Target Collaboration invitation was sent. The creator asks where to send her size and address.",
+      "input_files": [],
+      "metadata": {
+        "case_type": "privacy_boundary",
+        "tier": "production"
+      },
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "names-verified-invite",
+            "description": "The message identifies the sent platform invitation.",
+            "weight": 1.0,
+            "failure_type": "missing_invite_state",
+            "passed": false,
+            "missing": [
+              "Jemputan Target Collaboration sudah dihantar",
+              "TikTok"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "gives-exact-platform-step",
+            "description": "The creator is told to accept and apply in Creator Center.",
+            "weight": 2.0,
+            "failure_type": "missing_creator_action",
+            "passed": false,
+            "missing": [
+              "terima jemputan",
+              "permohonan sampel percuma",
+              "TikTok Shop Creator Center"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "avoids-whatsapp-collection",
+            "description": "The message does not ask for manual logistics.",
+            "weight": 2.0,
+            "failure_type": "privacy_overcollection",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "Send your size and full address here on WhatsApp",
+              "arrange it manually"
+            ]
+          }
+        ],
+        "failed": [
+          {
+            "id": "names-verified-invite",
+            "description": "The message identifies the sent platform invitation.",
+            "weight": 1.0,
+            "failure_type": "missing_invite_state",
+            "passed": false,
+            "missing": [
+              "Jemputan Target Collaboration sudah dihantar",
+              "TikTok"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "gives-exact-platform-step",
+            "description": "The creator is told to accept and apply in Creator Center.",
+            "weight": 2.0,
+            "failure_type": "missing_creator_action",
+            "passed": false,
+            "missing": [
+              "terima jemputan",
+              "permohonan sampel percuma",
+              "TikTok Shop Creator Center"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "avoids-whatsapp-collection",
+            "description": "The message does not ask for manual logistics.",
+            "weight": 2.0,
+            "failure_type": "privacy_overcollection",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "Send your size and full address here on WhatsApp",
+              "arrange it manually"
+            ]
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "names-verified-invite",
+            "description": "The message identifies the sent platform invitation.",
+            "weight": 1.0,
+            "failure_type": "missing_invite_state",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "gives-exact-platform-step",
+            "description": "The creator is told to accept and apply in Creator Center.",
+            "weight": 2.0,
+            "failure_type": "missing_creator_action",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "avoids-whatsapp-collection",
+            "description": "The message does not ask for manual logistics.",
+            "weight": 2.0,
+            "failure_type": "privacy_overcollection",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "sample-requested-not-approved",
+      "prompt": "TikTok shows a free-sample request, but nobody has approved it yet. What is the state and next action?",
+      "input_files": [],
+      "metadata": {
+        "case_type": "state_boundary",
+        "tier": "production"
+      },
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "keeps-correct-state",
+            "description": "The sample remains requested, not approved.",
+            "weight": 2.0,
+            "failure_type": "sample_state_collapse",
+            "passed": false,
+            "missing": [
+              "sample_requested",
+              "sample_approved=pending"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-warehouse-pending",
+            "description": "Warehouse handling remains pending.",
+            "weight": 1.0,
+            "failure_type": "premature_warehouse_handoff",
+            "passed": false,
+            "missing": [
+              "warehouse_notification_status=not_started"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-shipping-claim",
+            "description": "No approval or shipment is claimed.",
+            "weight": 2.0,
+            "failure_type": "false_shipment_claim",
+            "passed": false,
+            "missing": [
+              "missing evidence"
+            ],
+            "present_forbidden": [
+              "warehouse has shipped it",
+              "Your sample is approved"
+            ]
+          }
+        ],
+        "failed": [
+          {
+            "id": "keeps-correct-state",
+            "description": "The sample remains requested, not approved.",
+            "weight": 2.0,
+            "failure_type": "sample_state_collapse",
+            "passed": false,
+            "missing": [
+              "sample_requested",
+              "sample_approved=pending"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-warehouse-pending",
+            "description": "Warehouse handling remains pending.",
+            "weight": 1.0,
+            "failure_type": "premature_warehouse_handoff",
+            "passed": false,
+            "missing": [
+              "warehouse_notification_status=not_started"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-shipping-claim",
+            "description": "No approval or shipment is claimed.",
+            "weight": 2.0,
+            "failure_type": "false_shipment_claim",
+            "passed": false,
+            "missing": [
+              "missing evidence"
+            ],
+            "present_forbidden": [
+              "warehouse has shipped it",
+              "Your sample is approved"
+            ]
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "keeps-correct-state",
+            "description": "The sample remains requested, not approved.",
+            "weight": 2.0,
+            "failure_type": "sample_state_collapse",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-warehouse-pending",
+            "description": "Warehouse handling remains pending.",
+            "weight": 1.0,
+            "failure_type": "premature_warehouse_handoff",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-shipping-claim",
+            "description": "No approval or shipment is claimed.",
+            "weight": 2.0,
+            "failure_type": "false_shipment_claim",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "approved-warehouse-queued-no-tracking",
+      "prompt": "The sample request is approved and the authorized warehouse handoff succeeded, but no tracking exists yet. Update the creator and CRM.",
+      "input_files": [],
+      "metadata": {
+        "case_type": "fulfillment_boundary",
+        "tier": "production"
+      },
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "records-distinct-states",
+            "description": "Approval and warehouse queue are recorded separately from shipment.",
+            "weight": 2.0,
+            "failure_type": "fulfillment_state_collapse",
+            "passed": false,
+            "missing": [
+              "sample_approved",
+              "warehouse_queued",
+              "shipped=pending"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "marks-tracking-gap",
+            "description": "Tracking remains an evidence gap.",
+            "weight": 1.0,
+            "failure_type": "missing_tracking_gate",
+            "passed": false,
+            "missing": [
+              "tracking=missing evidence"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-premature-shipped-message",
+            "description": "The creator is not told the parcel has shipped.",
+            "weight": 2.0,
+            "failure_type": "false_shipment_claim",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "your parcel has shipped",
+              "will arrive shortly"
+            ]
+          }
+        ],
+        "failed": [
+          {
+            "id": "records-distinct-states",
+            "description": "Approval and warehouse queue are recorded separately from shipment.",
+            "weight": 2.0,
+            "failure_type": "fulfillment_state_collapse",
+            "passed": false,
+            "missing": [
+              "sample_approved",
+              "warehouse_queued",
+              "shipped=pending"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "marks-tracking-gap",
+            "description": "Tracking remains an evidence gap.",
+            "weight": 1.0,
+            "failure_type": "missing_tracking_gate",
+            "passed": false,
+            "missing": [
+              "tracking=missing evidence"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-premature-shipped-message",
+            "description": "The creator is not told the parcel has shipped.",
+            "weight": 2.0,
+            "failure_type": "false_shipment_claim",
+            "passed": false,
+            "missing": [],
+            "present_forbidden": [
+              "your parcel has shipped",
+              "will arrive shortly"
+            ]
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "records-distinct-states",
+            "description": "Approval and warehouse queue are recorded separately from shipment.",
+            "weight": 2.0,
+            "failure_type": "fulfillment_state_collapse",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "marks-tracking-gap",
+            "description": "Tracking remains an evidence gap.",
+            "weight": 1.0,
+            "failure_type": "missing_tracking_gate",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "no-premature-shipped-message",
+            "description": "The creator is not told the parcel has shipped.",
+            "weight": 2.0,
+            "failure_type": "false_shipment_claim",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    }
+  ],
+  "failures": [],
+  "blind_review": {
+    "pack": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_blind_review_pack.json",
+    "answer_key": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_blind_answer_key.json",
+    "pair_count": 6
+  },
+  "artifacts": {
+    "json": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_quality_scorecard.json",
+    "markdown": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_quality_scorecard.md",
+    "blind_review_pack_json": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_blind_review_pack.json",
+    "blind_review_pack_md": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_blind_review_pack.md",
+    "blind_answer_key_json": "/Users/vanch/.skills-manager/skills/tiktok-creator-partnership/reports/output_blind_answer_key.json"
+  }
+}

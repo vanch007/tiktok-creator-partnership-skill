@@ -1,0 +1,148 @@
+{
+  "optimizer_hints": {
+    "capability": "Research creator-product fit from TikTok Shop Affiliate, public profile, optional Kalodata, or mixed evidence, then manage one-to-one TikTok Shop creator partnerships through Target Collaboration, platform samples, content, ads, and CRM state",
+    "inputs": ["creator profile", "Affiliate creator detail", "Kalodata profile", "creator chat", "rate card", "platform status", "CRM row", "达人资料", "达人联盟主页", "Kalodata 数据", "联盟后台状态"],
+    "trigger_actions": ["analyze creator fit", "search exact creator", "compare Affiliate and Kalodata", "draft creator outreach", "reply to creator", "send Target Collaboration invite", "handle free sample application", "update creator CRM", "分析达人匹配度", "联盟后台搜索达人", "对比联盟和 Kalodata", "达人建联", "发送合作邀约", "处理免费样品申请"],
+    "exclusions": ["mass messaging", "consumer support", "legal advice", "manual fulfillment-data collection", "群发", "消费者客服", "法律意见", "在聊天中收集地址"]
+  },
+  "fallback_positive_concepts": [
+    "creator_research",
+    "creator_outreach",
+    "creator_reply",
+    "target_collaboration",
+    "partnership_operations"
+  ],
+  "positive_concepts": {
+    "creator_research": {
+      "weight": 0.36,
+      "phrases": [
+        "creator fit",
+        "analyze creator",
+        "affiliate creator detail",
+        "affiliate center creator",
+        "search exact creator",
+        "compare affiliate and kalodata",
+        "creator evidence coverage",
+        "达人匹配度",
+        "分析达人",
+        "联盟后台搜索达人",
+        "达人联盟主页",
+        "对比联盟和 kalodata",
+        "达人数据维度"
+      ]
+    },
+    "creator_outreach": {
+      "weight": 0.30,
+      "phrases": [
+        "outreach",
+        "first outreach",
+        "affiliate creator",
+        "tiktok shop creator outreach",
+        "creator-specific outreach",
+        "creator partnership",
+        "tiktok affiliate creator",
+        "creator-specific message",
+        "tiktok 达人",
+        "达人建联",
+        "联系达人",
+        "达人合作",
+        "达人邀约"
+      ]
+    },
+    "creator_reply": {
+      "weight": 0.24,
+      "phrases": [
+        "reply",
+        "replies",
+        "follow-up",
+        "rate card",
+        "rate cards",
+        "objection",
+        "reply to the creator",
+        "creator replied",
+        "creator follow-up",
+        "handle a rate card",
+        "creator objection",
+        "回复达人",
+        "达人回复",
+        "跟进达人",
+        "达人报价"
+      ]
+    },
+    "target_collaboration": {
+      "weight": 0.28,
+      "phrases": [
+        "target collaboration",
+        "collaboration invitation",
+        "free-sample application",
+        "free sample application",
+        "tiktok sample application",
+        "platform sample application",
+        "合作邀请",
+        "定向合作",
+        "联盟后台邀约",
+        "免费样品申请",
+        "样品申请"
+      ]
+    },
+    "partnership_operations": {
+      "weight": 0.18,
+      "phrases": [
+        "sample",
+        "warehouse",
+        "commission",
+        "crm",
+        "content delivery",
+        "ad authorization",
+        "creator crm",
+        "warehouse handoff",
+        "sample approval",
+        "ad authorization",
+        "commission negotiation",
+        "content delivery",
+        "达人 crm",
+        "通知仓库",
+        "样品审批",
+        "广告授权",
+        "佣金谈判"
+      ]
+    }
+  },
+  "negative_concepts": {
+    "mass_messaging": {
+      "weight": 0.8,
+      "exclusive": true,
+      "phrases": ["mass messaging", "bulk outreach", "broadcast message", "send to every creator", "identical creator partnership pitch", "thousands of accounts", "5,000 accounts", "群发", "批量发送", "批量建联"]
+    },
+    "consumer_support": {
+      "weight": 0.8,
+      "exclusive": true,
+      "phrases": ["consumer support", "customer refund", "customer complaint", "消费者客服", "顾客退款", "客户投诉"]
+    },
+    "legal_advice": {
+      "weight": 0.8,
+      "exclusive": true,
+      "phrases": ["legal advice", "interpret this contract as a lawyer", "法律意见", "律师解读合同"]
+    },
+    "manual_fulfillment_collection": {
+      "weight": 0.75,
+      "exclusive": true,
+      "phrases": ["collect address in whatsapp", "ask for size and address", "copy shipping address into crm", "在 whatsapp 收集地址", "询问尺码和地址", "把收货地址填进 crm"]
+    },
+    "non_tiktok_sponsorship": {
+      "weight": 0.6,
+      "exclusive": true,
+      "phrases": ["instagram influencer sponsorship", "youtube sponsorship", "instagram 网红合作", "youtube 博主合作"]
+    },
+    "content_only": {
+      "weight": 0.55,
+      "exclusive": true,
+      "phrases": ["write a tiktok caption", "edit my tiktok video", "consumer product description", "写 tiktok 视频文案", "剪辑 tiktok 视频", "商品详情文案"]
+    },
+    "list_only": {
+      "weight": 0.7,
+      "exclusive": true,
+      "phrases": ["creator list only", "clean this creator list", "达人名单", "只整理名单"]
+    }
+  }
+}

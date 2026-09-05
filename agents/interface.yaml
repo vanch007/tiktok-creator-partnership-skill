@@ -1,0 +1,22 @@
+interface:
+  display_name: "TikTok Creator Partnership"
+  short_description: "Research creator fit and manage TikTok Shop partnerships"
+  default_prompt: "Use $tiktok-creator-partnership to verify the exact creator, analyze product fit from current-shop Affiliate evidence with optional Kalodata enrichment, report score plus coverage and conflicts, then choose one authorization-safe next step. For an interested creator, use the authorized TikTok Target Collaboration and free-sample application flow; never collect size or address in chat when TikTok manages fulfillment."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "agent-skills-compatible"
+  activation:
+    mode: "automatic-or-manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "Use SKILL.md and agents/openai.yaml; keep external actions authorization-gated and state claims evidence-backed."
+    agent-skills-compatible: "Use the neutral SKILL.md contract; if platform state cannot be verified, return the next action as pending and do not claim completion."

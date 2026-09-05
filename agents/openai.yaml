@@ -1,0 +1,6 @@
+interface:
+  display_name: "TikTok Creator Partnership"
+  short_description: "Research creator fit and manage TikTok Shop partnerships"
+  default_prompt: "Use $tiktok-creator-partnership to verify the exact creator, analyze product fit from current-shop Affiliate evidence with optional Kalodata enrichment, report score plus coverage and conflicts, then choose one authorization-safe next step. For an interested creator, use the authorized TikTok Target Collaboration and free-sample application flow; never collect size or address in chat when TikTok manages fulfillment."
+policy:
+  allow_implicit_invocation: true

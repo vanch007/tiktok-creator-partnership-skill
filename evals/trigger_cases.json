@@ -1,0 +1,41 @@
+{
+  "recommended_threshold": 0.18,
+  "should_trigger": [
+    {"text": "Draft a creator-specific outreach message for this TikTok Shop affiliate creator after reviewing her profile.", "family": "first_outreach"},
+    {"text": "The creator replied that she wants to collaborate. Create the authorized Target Collaboration invite and tell her how to apply for the free sample.", "family": "interest_to_invite"},
+    {"text": "Reply to the creator's commission question without restarting the whole pitch.", "family": "reply_handling"},
+    {"text": "Evaluate this TikTok creator rate card and choose one safe next action.", "family": "negotiation"},
+    {"text": "The TikTok sample application is visible but not approved. Update the creator CRM and tell me the next step.", "family": "sample_state"},
+    {"text": "The free sample was approved. Notify the warehouse if authorized and record the evidence-backed status.", "family": "warehouse_handoff"},
+    {"text": "Write a localized follow-up for this TikTok affiliate creator who received the product but has not posted.", "family": "delivery_followup"},
+    {"text": "Handle ad authorization for a creator's TikTok Shop video without bundling usage rights.", "family": "ads_rights"},
+    {"text": "分析这位 TikTok 达人是否匹配，并写一条针对性的首次建联消息。", "family": "cn_first_outreach"},
+    {"text": "达人回复愿意合作，请在联盟后台发起定向合作，再通知她接受邀请并申请免费样品。", "family": "cn_interest_to_invite"},
+    {"text": "达人问佣金是多少，帮我回复达人并同步达人 CRM 的下一步。", "family": "cn_reply_crm"},
+    {"text": "样品申请已审批，按授权通知仓库，并且不要在没有物流单号时写成已发货。", "family": "cn_fulfillment_state"}
+    ,{"text": "Search this exact creator in our TikTok Shop Affiliate Center and analyze whether she fits product 8015; use Kalodata only if needed.", "family": "affiliate_fit_research"}
+    ,{"text": "Compare this creator's Affiliate profile with Kalodata without averaging metrics from different date windows.", "family": "multi_source_fit_research"}
+    ,{"text": "在 ShenTai Shop 联盟后台按精确账号搜索这位达人，分析她与 8015 的匹配度；资料够用就不要再开 Kalodata。", "family": "cn_affiliate_fit_research"}
+    ,{"text": "联盟后台和 Kalodata 的达人数据维度不同，帮我保留来源和时间窗口后判断匹配度。", "family": "cn_multi_source_fit_research"}
+  ],
+  "should_not_trigger": [
+    {"text": "Write one broadcast message and bulk outreach to every TikTok creator in this list.", "family": "mass_messaging"},
+    {"text": "Send this identical creator partnership pitch to 5,000 accounts.", "family": "mass_messaging"},
+    {"text": "Handle a customer refund for underwear purchased from TikTok Shop.", "family": "consumer_support"},
+    {"text": "Give legal advice and interpret this creator contract as a lawyer.", "family": "legal_advice"},
+    {"text": "Collect address in WhatsApp and copy the shipping address into CRM for every creator.", "family": "manual_fulfillment_collection"},
+    {"text": "Plan an Instagram influencer sponsorship campaign.", "family": "non_tiktok_sponsorship"},
+    {"text": "Write a TikTok caption for my consumer product video.", "family": "content_only"},
+    {"text": "Edit my TikTok video and add subtitles.", "family": "content_only"},
+    {"text": "给所有达人群发同一条建联话术。", "family": "cn_mass_messaging"},
+    {"text": "处理顾客退款和客户投诉。", "family": "cn_consumer_support"},
+    {"text": "在 WhatsApp 询问尺码和地址，再把收货地址填进 CRM。", "family": "cn_manual_fulfillment"},
+    {"text": "写一段 TikTok 商品详情文案。", "family": "cn_content_only"}
+  ],
+  "near_neighbor": [
+    {"text": "Summarize this creator economy report.", "family": "research_summary"},
+    {"text": "Design a general affiliate program strategy without contacting individual creators.", "family": "strategy_only"},
+    {"text": "Calculate the margin of a RM45.90 order.", "family": "finance_only"},
+    {"text": "整理这份达人名单的粉丝数量，但不要分析、建联或回复达人。", "family": "list_cleanup"}
+  ]
+}
